@@ -1,0 +1,54 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+  <!--
+    This Jelly script is used to produce the global configuration option.
+
+    Jenkins uses a set of tag libraries to provide uniformity in forms.
+    To determine where this tag is defined, first check the namespace URI,
+    and then look under $JENKINS/views/. For example, <f:section> is defined
+    in $JENKINS/views/lib/form/section.jelly.
+
+    It's also often useful to just check other similar scripts to see what
+    tags they use. Views are always organized according to its owner class,
+    so it should be straightforward to find them.
+  -->
+
+  <f:section title="BMC Policy Service Configuration">
+      <f:entry title="Connector configuration"
+        description="Connector binaries and other details">
+        <f:repeatable var="connector" items="${descriptor.connectors}" add="Add Connector" >
+          <table width="100%">
+            <f:entry title="Name">
+              <f:textbox field="name" name="name" value="${connector.name}"/>
+            </f:entry>
+            <f:entry title="Path to the executable">
+              <f:textbox field="path" name="path" value="${connector.path}"/>
+            </f:entry>
+            <f:entry title="Arguments">
+              <f:textbox field="args" name="args" value="${connector.args}"/>
+            </f:entry>
+            <f:optionalBlock checked="${connector.isRemote()}" field="remote" name="remote" title="Connector resides in remote system">
+              <f:entry title="Hostname">
+                <f:textbox field="host" name="host" value="${connector.getHost()}"/>
+              </f:entry>
+              <f:entry title="Port">
+                <f:number field="port" name="port" value="${connector.getPort()}" default="22"/>
+              </f:entry>
+              <f:entry title="Username">
+                <f:textbox field="username" name="username" value="${connector.getUsername()}"/>
+              </f:entry>
+              <f:entry title="Password">
+                <f:password field="password" name="password" value="${connector.getPassword()}"/>
+              </f:entry>
+            </f:optionalBlock>
+            <f:entry title="">
+              <div align="right">
+                <f:repeatableDeleteButton />
+              </div>
+            </f:entry>
+          </table>
+        </f:repeatable>
+      </f:entry>
+  </f:section>
+
+</j:jelly>
