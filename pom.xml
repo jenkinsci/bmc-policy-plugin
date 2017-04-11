@@ -10,7 +10,7 @@
     <relativePath/>
   </parent>
   <groupId>com.bmc.policy.jenkins</groupId>
-  <artifactId>bmc-policy-connector</artifactId>
+  <artifactId>bmc-policy</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>hpi</packaging>
 
