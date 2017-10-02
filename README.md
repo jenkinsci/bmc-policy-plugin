@@ -1,6 +1,4 @@
 # Jenkins Plugin for Poliy Service Connectors
-![alt tag](https://github.bmc.com/pages/cto-office/OpenBMC/1/images/badge-internal.png)
-
 
 ## Synopsis
 The connector Plugin integrates Jenkins with BMC Policy Service connectors. This plugin adds a build step and a post-build action that can be configured to invoke the policy connectors
@@ -19,7 +17,7 @@ To get started you can clone the bmc-connector-jenkins-plugin repository and bui
 
 #### Build Instructions
 ```
-* git clone https://github.bmc.com/policy-community/bmc-connector-jenkins-plugin.git
+* git clone https://github.com/jenkinsci/bmc-policy-plugin.git
 * cd bmc-connector-jenkins-plugin
 * mvn package
 ```
@@ -94,24 +92,14 @@ N.A.
 So you want to contribute to this repository?  Great!
 
 ### Filing an issue
-Should you find problems, please create an [issue](https://github.bmc.com/policy-community/bmc-connector-jenkins-plugin/issues/new).  Otherwise, you can mail [Sudesh Kodialbail ](mailto:sudesh_kodialbail@bmc.com) for questions or comments.  
+Should you find problems, please create an [issue](https://github.com/jenkinsci/bmc-policy-plugin/issues/new).  Otherwise, you can mail [Sudesh Kodialbail ](mailto:sudesh_kodialbail@bmc.com) for questions or comments.  
 
 ### Contributions
 In order to make contributions, please follow these steps
   1.  Submit an issue describing your proposed changes
-  2.  The repo owner will respond to your issue promptyl
+  2.  The repo owner will respond to your issue promptly
   3.  If your proposed change is accepted, fork the repo, develop and test your changes
   4.  Submit a pull request
 
 ## License
 Jenkins Plugin for Policy Service Connector is under the Apache License 2.0. See the [LICENSE](LICENSE) file for details.
-
-## Sponsor
-| Name | Title | Email |
-|------|-------|-------|
-|Daniel Nelson| Sr Dir - Product Management | Daniel_Nelson@bmc.com |
-
-## Champion
-| Name | Title | Email |
-|------|-------|-------|
-|Brendan Farrell| Product Development Architect | brendan_farrell@bmc.com |
